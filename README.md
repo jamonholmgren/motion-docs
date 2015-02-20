@@ -1,5 +1,7 @@
 # MotionDocs
 
+[![Build Status](https://travis-ci.org/jamonholmgren/motion-docs.svg?branch=master)](https://travis-ci.org/jamonholmgren/motion-docs)
+
 Provides class and method documentation right in your RubyMotion REPL.
 
 ## Installation
