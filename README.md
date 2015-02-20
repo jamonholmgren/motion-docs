@@ -57,6 +57,8 @@ If you give it a class or instance method name, it'll give you documentation for
  ...
 ```
 
+![addsubview](http://clrsight.co/jh/2015-02-20-kyrmu.png?+)
+
 ## Support
 
 File an issue here at Github. Better yet, submit a pull request with a fix. :-)
