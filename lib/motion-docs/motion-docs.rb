@@ -36,7 +36,7 @@ if !(UIDevice.currentDevice.model =~ /simulator/i).nil?
       ri_docs.split("\n").map do |ri_line|
         if ri_line == ""
           nil
-        elsif ri_line.include?("Class:") || ri_line.include?("Method:")
+        elsif ri_line.include?(" Class:") || ri_line.include?(" Method:")
           color = :blue
           colored_text ri_line.split(":", 2).last.strip, :light_blue
         elsif ri_line.start_with? "--------------"
