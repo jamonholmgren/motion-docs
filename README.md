@@ -23,7 +23,7 @@ to look up in the documentation.
 
 You'll get something like this:
 
-![UINavigationController documentation](http://clrsight.co/jh/2015-02-19-o8uh6.png?+)
+![UINavigationController documentation](http://clrsight.co/jh/2015-02-20-uzah0.png?+)
 
 To look up a method, just use the familiar notation for class and instance methods:
 
