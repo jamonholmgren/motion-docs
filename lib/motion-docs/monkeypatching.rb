@@ -1,27 +1,28 @@
 if !(UIDevice.currentDevice.model =~ /simulator/i).nil?
   class Object
-    def self.ri
-      puts MotionDocs.new(self.inspect).help
+    def self.docs(method_name=nil)
+      subject = self.to_s
+      if method_name
+        subject << "." unless method_name.start_with?("#") || method_name.start_with?(".")
+        subject << method_name.to_s
+      end
+      puts MotionDocs.new(subject).help
     end
-    def self.docs; ri; end
-    def ri
-      self.class.ri
-    end
-    alias docs ri
+    def self.ri(m=nil); docs(m); end
   end
 
   class String
-    def ri
-      puts MotionDocs.new(WeakRef.new(self)).help
+    def docs
+      puts MotionDocs.new(self).help
     end
-    alias docs ri
+    alias ri docs
   end
 
   module Kernel
-    def ri(subject)
+    def docs(subject)
       puts MotionDocs.new(subject.to_s).help
       nil
     end
-    alias docs ri
+    alias ri docs
   end
 end
